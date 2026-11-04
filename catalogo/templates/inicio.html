@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+  <section class="portada">
+    <h1>Los lugares que guardan la memoria de Chile</h1>
+    <p>La Fundación Patrimonio Vivo identifica, documenta y difunde edificios históricos, monumentos, murales y otros espacios patrimoniales.</p>
+    <a class="boton boton-ocre" href="{% url 'catalogo' %}">Ver el catálogo</a>
+  </section>
+  <img class="cerro" src="{% static 'cerro.svg' %}" alt="">
+{% endblock %}

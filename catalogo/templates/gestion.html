@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<main>
+  <h1>Gestión patrimonial</h1>
+
+  {% if perms.catalogo.add_lugarpatrimonial %}
+    <p><a class="boton" href="{% url 'agregar' %}">Agregar lugar</a></p>
+  {% endif %}
+
+  <table>
+    <tr>
+      <th>Lugar</th>
+      <th>Categoría</th>
+      <th>Acción</th>
+    </tr>
+    {% for lugar in lugares %}
+      <tr>
+        <td><a href="{% url 'detalle' lugar.id %}">{{ lugar.nombre }}</a></td>
+        <td>{{ lugar.categoria.nombre }}</td>
+        <td>
+          {% if perms.catalogo.change_lugarpatrimonial %}
+            <a href="{% url 'editar' lugar.id %}">Modificar</a>
+          {% else %}
+            Sin permiso
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</main>
+{% endblock %}

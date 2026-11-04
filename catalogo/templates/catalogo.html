@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+<main>
+  {% if categoria_elegida %}
+    <h1>{{ categoria_elegida.nombre }}</h1>
+    <p>{{ categoria_elegida.descripcion }}</p>
+  {% else %}
+    <h1>Catálogo patrimonial</h1>
+  {% endif %}
+
+  <p class="filtros">
+    <a href="{% url 'catalogo' %}">Todos</a>
+    {% for categoria in categorias %}
+      <a href="{% url 'por_categoria' categoria.id %}">{{ categoria.nombre }}</a>
+    {% endfor %}
+  </p>
+
+  <div class="grilla">
+    {% for lugar in lugares %}
+      <article>
+        {% if lugar.imagen %}
+          <img src="{{ lugar.imagen }}" alt="Imagen de {{ lugar.nombre }}">
+        {% else %}
+          <img src="{% static 'sin-imagen.svg' %}" alt="">
+        {% endif %}
+        <h2><a href="{% url 'detalle' lugar.id %}">{{ lugar.nombre }}</a></h2>
+        <p>{{ lugar.categoria.nombre }}</p>
+        <p>{{ lugar.ubicacion }}</p>
+      </article>
+    {% empty %}
+      <p>No hay lugares registrados en esta categoría.</p>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

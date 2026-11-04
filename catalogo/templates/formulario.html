@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<main>
+  <h1>Datos del lugar</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="boton" type="submit">Guardar</button>
+    <a class="boton" href="{% url 'gestion' %}">Cancelar</a>
+  </form>
+</main>
+{% endblock %}

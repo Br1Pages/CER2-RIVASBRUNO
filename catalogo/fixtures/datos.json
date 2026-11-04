@@ -1,0 +1,130 @@
+[
+  {
+    "model": "catalogo.categoria",
+    "pk": 1,
+    "fields": {
+      "nombre": "Edificios históricos",
+      "descripcion": "Construcciones que marcaron la vida cívica, religiosa o social de su época."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 2,
+    "fields": {
+      "nombre": "Monumentos",
+      "descripcion": "Obras y sitios reconocidos por su valor histórico."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 3,
+    "fields": {
+      "nombre": "Murales",
+      "descripcion": "Arte en muros y fachadas que relata la identidad de barrios y comunidades."
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 4,
+    "fields": {
+      "nombre": "Espacios patrimoniales",
+      "descripcion": "Conjuntos, campamentos y recorridos que se comprenden como un todo."
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 1,
+    "fields": {
+      "nombre": "Palacio de La Moneda",
+      "descripcion": "Edificio neoclásico diseñado por Joaquín Toesca. Nació como casa de moneda y hoy es la sede de la Presidencia de Chile.",
+      "ubicacion": "Santiago",
+      "anio_construccion": 1805,
+      "imagen": "",
+      "categoria": 1
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 2,
+    "fields": {
+      "nombre": "Iglesia de San Francisco",
+      "descripcion": "Una de las construcciones coloniales más antiguas de Santiago, ubicada en plena Alameda.",
+      "ubicacion": "Santiago",
+      "anio_construccion": 1618,
+      "imagen": "",
+      "categoria": 1
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 3,
+    "fields": {
+      "nombre": "Iglesia de Achao",
+      "descripcion": "Templo de madera de la escuela chilota, parte del conjunto de iglesias de Chiloé reconocido como Patrimonio Mundial.",
+      "ubicacion": "Achao, Chiloé",
+      "anio_construccion": 1740,
+      "imagen": "",
+      "categoria": 1
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 4,
+    "fields": {
+      "nombre": "Ascensor Polanco",
+      "descripcion": "Ascensor de Valparaíso al que se entra por un túnel y que sube en vertical por el interior del cerro.",
+      "ubicacion": "Valparaíso",
+      "anio_construccion": 1916,
+      "imagen": "",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 5,
+    "fields": {
+      "nombre": "Fuerte de Niebla",
+      "descripcion": "Fortificación española del sistema defensivo de la bahía de Corral y Valdivia.",
+      "ubicacion": "Niebla, Región de Los Ríos",
+      "anio_construccion": 1671,
+      "imagen": "",
+      "categoria": 2
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 6,
+    "fields": {
+      "nombre": "Museo a Cielo Abierto de San Miguel",
+      "descripcion": "Murales de gran formato pintados sobre los edificios de la Población San Miguel.",
+      "ubicacion": "San Miguel, Santiago",
+      "anio_construccion": 2009,
+      "imagen": "https://services.meteored.com/img/article/la-galeria-mas-grande-de-santiago-esta-al-aire-libre-asi-puedes-recorrer-sus-murales-mas-espectaculares-1785530690870_1280.jpg",
+      "categoria": 3
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 7,
+    "fields": {
+      "nombre": "Oficina salitrera Humberstone",
+      "descripcion": "Antiguo pueblo salitrero del desierto de Atacama, reconocido como Patrimonio Mundial.",
+      "ubicacion": "Pozo Almonte, Región de Tarapacá",
+      "anio_construccion": 1872,
+      "imagen": "",
+      "categoria": 4
+    }
+  },
+  {
+    "model": "catalogo.lugarpatrimonial",
+    "pk": 8,
+    "fields": {
+      "nombre": "Campamento Sewell",
+      "descripcion": "Ciudad minera de la cordillera, conocida por sus escaleras y edificios de colores. Es Patrimonio Mundial.",
+      "ubicacion": "Machalí, Región de O'Higgins",
+      "anio_construccion": 1905,
+      "imagen": "",
+      "categoria": 4
+    }
+  }
+]
